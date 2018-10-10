@@ -80,3 +80,7 @@ pqxx::field::size_type pqxx::field::size() const noexcept
 {
   return home().get_length(idx(), col());
 }
+
+#ifdef WIN32
+#pragma warning(pop)
+#endif
